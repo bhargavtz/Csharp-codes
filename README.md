@@ -6,6 +6,7 @@ Welcome to the Csharp-codes repository! This is a comprehensive collection of C#
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
 - [Contents](#contents)
+- [csharp code](#csharp-code)
 - [Contributing](#contributing)
 - [Feedback](#feedback)
 - [License](#license)
@@ -21,7 +22,7 @@ To begin exploring the Csharp-codes repository, follow these steps:
 1. Clone the repository to your local machine using the following command:
 
     ```bash
-    git clone https://github.com/bhargavtz/Csharp-codes.git
+    git clone https://github.com/your-username/Csharp-codes.git
     ```
 
 2. Ensure you have [Visual Studio](https://visualstudio.microsoft.com/) or another C# development environment installed.
@@ -30,6 +31,10 @@ To begin exploring the Csharp-codes repository, follow these steps:
 
 ## Contents
 
+### Code Snippets
+
+The [code-snippets](code-snippets/) directory contains short and focused code snippets, each highlighting a specific C# feature or concept. These snippets are perfect for quick reference and learning.
+
 ### Projects
 
 Explore the [projects](projects/) directory to find larger C# projects. These projects showcase the implementation of more complex applications, allowing you to delve into real-world scenarios.
@@ -37,6 +42,24 @@ Explore the [projects](projects/) directory to find larger C# projects. These pr
 ### Tutorials
 
 The [tutorials](tutorials/) directory offers step-by-step guides on various C# topics. These tutorials provide in-depth explanations and hands-on exercises to deepen your understanding.
+
+## csharp code
+
+1. Create a console application in C# to print a message “Welcome To C#.NET”. 
+```bash
+using System;
+
+namespace MyApp
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Welcome To C#.NET");
+    }
+  }
+}
+```
 
 ## Contributing
 
