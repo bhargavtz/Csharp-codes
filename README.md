@@ -75,7 +75,7 @@ Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) and the [Contribution
 
 ## Feedback
 
-Your feedback is essential! If you have suggestions, find bugs, or want to request specific content, please [open an issue](https://github.com/your-username/Csharp-codes/issues).
+Your feedback is essential! If you have suggestions, find bugs, or want to request specific content, please [open an issue](https://github.com/bhargavtz/Csharp-codes/issues).
 
 ## License
 
