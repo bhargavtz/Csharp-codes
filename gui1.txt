@@ -1,0 +1,410 @@
+-----------------------------------------------------1-----------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//vhp
+
+class Converter
+{
+    private double temperature;
+
+    public void CelsiusToFahrenheit()
+    {
+        temperature = (temperature * 9 / 5) + 32;
+    }
+
+    public void GetData()
+    {
+        
+        temperature = Convert.ToDouble(Console.ReadLine());
+    }
+
+    public void DisplayResult()
+    {
+        CelsiusToFahrenheit();
+        Console.WriteLine("Temperature in Fahrenheit:"+ temperature);
+        Console.Read();
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        
+        Converter converter = new Converter();
+        Console.WriteLine("enter Temperature :");
+        converter.GetData();
+        converter.DisplayResult();
+        
+    }
+}
+----------------------------------------------------2------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//vhp
+class Converter
+{
+    private int Data, Days, weeks, years;
+   
+    private void gateData()
+    {
+        Console.Write("enter tha day:-");
+        Data = Convert.ToInt32(Console.ReadLine());
+    }
+    public void ConvertDays()
+    {
+        gateData();
+        int years = Data / 365;
+        int Days = Data % 365;
+        int weeks = Days / 7;
+        Days = Days % 7;
+     Console.WriteLine("years" + years + "\n Days" + Days + "\n weeks" + weeks);
+    }
+
+}
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Converter daey =new Converter();
+            daey.ConvertDays();
+            
+            Console.Read();
+        }
+    }
+}
+---------------------------------------------3---------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//vhp
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a year: ");
+            int Year = Convert.ToInt32(Console.ReadLine());
+            if ((Year % 4 == 0 && Year % 100 != 0) )
+                    {
+                Console.WriteLine("is a leap year.");
+            }
+            else
+            {
+                Console.WriteLine("is not leap year.");
+            }
+
+            Console.Read();
+        }
+    }
+}
+---------------------------------------------------------4------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//vhp
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        
+            
+                int sum = 0;
+
+               
+                for (int i = 1; i <= 50; i++)
+                {
+                    sum += i;
+                }
+
+                Console.WriteLine("Sum of the first 50 natural numbers: "+sum);
+            Console.Read();
+        }
+    
+    }
+}
+---------------------------------------------5-----------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//vhp
+class Calculator
+{
+    public static void PerformOperations(double num1, double num2, char operation)
+    {
+        double result ;
+
+        switch (operation)
+        {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    Console.WriteLine("Cannot divide by zero.");
+                    return;
+                }
+                break;
+            default:
+                Console.WriteLine("Invalid operation.");
+                return;
+        }
+
+        Console.WriteLine("Result: "+result);
+    }
+}
+namespace ConsoleApp2
+{
+    class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Enter the first number: ");
+        double number1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter the second number: ");
+        double number2 = Convert.ToDouble(Console.ReadLine());
+
+        
+        Console.Write("Enter the operation (+, -, *, /): ");
+        char operation = Convert.ToChar(Console.ReadLine());
+
+     
+        Calculator.PerformOperations(number1, number2, operation);
+            Console.Read();
+        }
+}
+
+}
+---------------------------------------------------6---------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//VHP
+class Student
+{
+    private string  name, semester;
+    private int enrollmentNo, totalMarks;
+    private int[] subjectMarks = new int[5];
+
+    public void GetData()
+    {
+        Console.Write("Enter Enrollment No : ");
+        enrollmentNo = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter Name: ");
+        name = Console.ReadLine();
+
+        Console.Write("Enter Semester: ");
+        semester = Console.ReadLine();
+
+        Console.WriteLine("Enter Marks for 5 Subjects:");
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write($"Subject {i + 1}: ");
+            subjectMarks[i] = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+
+    public void CalculatePercentage()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            totalMarks += subjectMarks[i];
+        }
+
+        double percentage = (double)totalMarks / 5;
+        Console.WriteLine("\nTotal Marks: " + totalMarks);
+        Console.WriteLine("Percentage: " + percentage);
+        AssignGrade(percentage);
+    }
+
+    public void AssignGrade(double percentage)
+    {
+        if (percentage >= 90)
+            Console.Write("A+");
+        else if (percentage >= 80)
+            Console.Write("A");
+        else if (percentage >= 70)
+            Console.Write("B");
+        else if (percentage >= 60)
+            Console.Write("C");
+        else if (percentage >= 50)
+            Console.Write("D");
+        else
+            Console.Write("F");
+    }
+
+    public void DisplayMarksheet()
+    {
+        Console.WriteLine("\nMark Sheet:");
+        Console.WriteLine("Enrollment No:"+ enrollmentNo);
+        Console.WriteLine("Name: "+name);
+        Console.WriteLine("Semester: "+semester);
+
+        Console.WriteLine("\nSubject-wise Marks:");
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Subject"+ (i + 1)+": "+subjectMarks[i]);
+        }
+
+        CalculatePercentage();
+    }
+}
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main()
+        {
+            Student student = new Student();
+            student.GetData();
+            student.DisplayMarksheet();
+            Console.Read();
+        }
+    }
+}
+--------------------------------------------------------------7-----------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//vhp
+class Bank
+{
+    private int amount, balance;
+    private string name, type;
+
+    public Bank()
+    {
+        balance = 501;
+    }
+
+    public void GetData()
+    {
+        Console.Write("Enter amount: ");
+        amount = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter name: ");
+        name = Console.ReadLine();
+        Console.Write("Enter type: ");
+        type = Console.ReadLine();
+      
+    }
+
+    public void Deposit(int depositAmount)
+    {
+        balance += depositAmount;
+        Console.WriteLine("Your balance: " + balance);
+    }
+
+    public void Withdraw(int withdrawalAmount)
+    {
+        if (balance < 500 || balance <= withdrawalAmount)
+        {
+            Console.WriteLine("Not enough balance available.");
+        }
+        else
+        {
+            balance -= withdrawalAmount;
+            Console.WriteLine("Your balance: " + balance);
+        }
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("------Your Details------");
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Type: " + type);
+        Console.WriteLine("Balance: " + balance);
+    }
+}
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main()
+        {
+            int amount;
+            int choice;
+            Bank account = new Bank();
+
+            do
+            {
+                Console.WriteLine("\nMenu:");
+                Console.WriteLine("1. Enter Account Details");
+                Console.WriteLine("2. Deposit");
+                Console.WriteLine("3. Withdraw");
+                Console.WriteLine("4. Display Account Details");
+                Console.WriteLine("5. Exit");
+                Console.Write("Enter your choice: ");
+
+                choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        account.GetData();
+                        break;
+                    case 2:
+                        Console.Write("Enter deposit amount: ");
+                        amount = Convert.ToInt32(Console.ReadLine());
+                        account.Deposit(amount);
+                        break;
+                    case 3:
+                        Console.Write("Enter withdrawal amount: ");
+                        amount = Convert.ToInt32(Console.ReadLine());
+                        account.Withdraw(amount);
+                        break;
+                    case 4:
+                        account.Display();
+                        break;
+                    case 5:
+                        Console.WriteLine("Exiting the program. Goodbye!");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please enter a valid option.");
+                        break;
+                }
+            } while (choice != 5);
+        }
+    }
+}
+  
