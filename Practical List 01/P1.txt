@@ -1,0 +1,274 @@
+1.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo {
+
+   class MyApplication {
+
+      static void Main(string[] args) {
+
+         double fahrenheit;
+
+         double celsius = 36;
+         Console.WriteLine("Celsius: " + celsius);
+
+         fahrenheit = (celsius * 9) / 5 + 32;
+         Console.WriteLine("Fahrenheit: " + fahrenheit);
+
+         Console.ReadLine();
+      }
+   }
+}
+==================================================================================
+
+2.
+using System;
+
+class Sample
+{
+    static void Main(string[] args)
+    {
+        int num     =0;
+        int years   =0;
+        int weeks   =0;
+        int days    =0;
+        
+        
+        Console.Write("Enter number of days: ");
+        num = Convert.ToInt32(Console.ReadLine());
+        
+        years = num / 365;
+        weeks = (num % 365) / 7;
+        days  = (num % 365) % 7;
+
+        Console.WriteLine("Years : " + years);
+        Console.WriteLine("Weeks : " + weeks);
+        Console.WriteLine("Days  : " + days );
+    }
+}
+=====================================================================================
+
+3.
+using System;  
+public class Exercise4  
+{  
+    public static void Main() 
+{
+    int chk_year;
+    Console.Write("\n\n");
+    Console.Write("Check whether a given year is leap year or not:\n");
+    Console.Write("----------------------------------------------");
+    Console.Write("\n\n");
+    Console.Write("Input an year : ");
+    chk_year= Convert.ToInt32(Console.ReadLine());
+ 
+    if ((chk_year % 400) == 0)
+ Console.WriteLine("{0} is a leap year.\n", chk_year);
+    else if ((chk_year % 100) == 0)
+ Console.WriteLine("{0} is not a leap year.\n", chk_year);
+    else if ((chk_year % 4) == 0)
+ Console.WriteLine("{0} is a leap year.\n", chk_year);
+    else
+ Console.WriteLine("{0} is not a leap year.\n", chk_year);
+}
+}
+=========================================================================================
+
+4.
+using System;
+class program
+{
+    public static void Main()
+    {
+        int num, sum = 0;
+        for (num = 1; num <= 50; num++)
+        {
+            sum = sum + num;
+        }
+        Console.WriteLine("Sum = {0}", sum);
+       Console.ReadLine();
+    }
+}
+===========================================================================================
+
+5.
+using System;
+
+// This is the beginning of the Exercise7 class
+public class Exercise7
+{
+    // This is the main method where the program execution starts
+    public static void Main()
+    {
+        // Prompting the user to enter the first number
+        Console.Write("Enter a number: ");
+        // Reading the first number entered by the user and converting it to an integer
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        // Prompting the user to enter the second number
+        Console.Write("Enter another number: ");
+        // Reading the second number entered by the user and converting it to an integer
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        // Displaying addition of the two numbers
+        Console.WriteLine("{0} + {1} = {2}", num1, num2, num1 + num2);
+
+        // Displaying subtraction of the two numbers
+        Console.WriteLine("{0} - {1} = {2}", num1, num2, num1 - num2);
+
+        // Displaying multiplication of the two numbers
+        Console.WriteLine("{0} x {1} = {2}", num1, num2, num1 * num2);
+
+        // Displaying division of the two numbers
+        Console.WriteLine("{0} / {1} = {2}", num1, num2, num1 / num2);
+
+        // Displaying modulus (remainder) of the two numbers
+        Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1 % num2);
+    }
+}
+=============================================================================================================
+
+6.
+// C# program to create marksheet for students. 
+using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Text; 
+
+class GFG{ 
+	
+static void Main(string[] args) 
+{ 
+	
+	// Declare variables for marks and total 
+	int r, marks1, marks2, marks3, total; 
+	
+	// Declare percentage variable 
+	float percentage; 
+	string n; 
+	
+	// Enter student roll number 
+	Console.WriteLine("Enter Student Roll Number :"); 
+	r = Convert.ToInt32(Console.ReadLine()); 
+	
+	// Enter student name 
+	Console.WriteLine("Enter Student Name :"); 
+	n = Console.ReadLine(); 
+	
+	// Enter student subject 1 marks 
+	Console.WriteLine("Enter Subject-1 Marks : "); 
+	marks1 = Convert.ToInt32(Console.ReadLine()); 
+	
+	// Enter student subject 2 marks 
+	Console.WriteLine("Enter Subject-2 Marks : "); 
+	marks2 = Convert.ToInt32(Console.ReadLine()); 
+	
+	// Enter student subject 3 marks 
+	Console.WriteLine("Enter Subject-3 Marks :"); 
+	marks3 = Convert.ToInt32(Console.ReadLine()); 
+	
+	// Calculate total marks 
+	total = marks1 + marks2 + marks3; 
+	
+	// Calculate percentage 
+	percentage = total / 3.0f; 
+	
+	// Display the final result 
+	Console.WriteLine("Final result of {0} is:", n); 
+	Console.WriteLine("Total Marks : " + total); 
+	Console.WriteLine("Percentage : " + percentage); 
+	
+	// Calculate grades 
+	if (percentage <= 35) 
+	{ 
+		Console.WriteLine("Grade is F"); 
+	} 
+	else if (percentage >= 34 && percentage <= 39) 
+	{ 
+		Console.WriteLine("Grade is D"); 
+	} 
+	else if (percentage >= 40 && percentage <= 59) 
+	{ 
+		Console.WriteLine("Grade is C"); 
+	} 
+	else if (percentage >= 60 && percentage <= 69) 
+	{ 
+		Console.WriteLine("Grade is B"); 
+	} 
+	else if (percentage >= 70 && percentage <= 79) 
+	{ 
+		Console.WriteLine("Grade is B+"); 
+	} 
+	else if (percentage >= 80 && percentage <= 90) 
+	{ 
+		Console.WriteLine("Grade is A"); 
+	} 
+	else if (percentage >= 91) 
+	{ 
+		Console.WriteLine("Grade is A+"); 
+	} 
+} 
+} 
+==========================================================================================
+
+7.
+using System;
+class program
+{
+    public static void Main()
+    {
+ 
+        int amount = 1000, deposit, withdraw;
+        int choice, pin = 0, x = 0;
+        Console.WriteLine("Enter Your Pin Number ");
+        pin = int.Parse(Console.ReadLine());
+        while (true)
+        {
+            Console.WriteLine("********Welcome to ATM Service**************\n");
+            Console.WriteLine("1. Check Balance\n");
+            Console.WriteLine("2. Withdraw Cash\n");
+            Console.WriteLine("3. Deposit Cash\n");
+            Console.WriteLine("4. Quit\n");
+            Console.WriteLine("*********************************************\n\n");
+            Console.WriteLine("Enter your choice: ");
+            choice = int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+            case 1:
+                Console.WriteLine("\n YOUR BALANCE IN Rs : {0} ", amount);
+                break;
+            case 2:
+                Console.WriteLine("\n ENTER THE AMOUNT TO WITHDRAW: ");
+                withdraw = int.Parse(Console.ReadLine());
+                if (withdraw % 100 != 0)
+                {
+                  Console.WriteLine("\n PLEASE ENTER THE AMOUNT IN MULTIPLES OF 100");
+                }
+                else if (withdraw > (amount - 500))
+                {
+                   Console.WriteLine("\n INSUFFICENT BALANCE");
+                }
+                else
+                {
+                   amount = amount - withdraw;
+                   Console.WriteLine("\n\n PLEASE COLLECT CASH");
+                   Console.WriteLine("\n YOUR CURRENT BALANCE IS {0}", amount);
+                }
+                break;
+            case 3:
+                Console.WriteLine("\n ENTER THE AMOUNT TO DEPOSIT");
+                deposit = int.Parse(Console.ReadLine());
+                amount = amount + deposit;
+                Console.WriteLine("YOUR BALANCE IS {0}", amount);
+                break;
+            case 4:
+                Console.WriteLine("\n THANK U USING ATM");
+            break;
+            }
+        }
+        Console.WriteLine("\n\n THANKS FOR USING OUT ATM SERVICE");
+    }
+ 
