@@ -22,7 +22,7 @@ To begin exploring the Csharp-codes repository, follow these steps:
 1. Clone the repository to your local machine using the following command:
 
     ```bash
-    git clone https://github.com/your-username/Csharp-codes.git
+    git clone https://github.com/bhargavtz/Csharp-codes.git
     ```
 
 2. Ensure you have [Visual Studio](https://visualstudio.microsoft.com/) or another C# development environment installed.
