@@ -6,7 +6,7 @@ Welcome to the Ebooks Collection! Below is a list of 11 books that you can explo
    - Description: Get ready for the next release of Microsoft's C# programming language with this essential Wrox beginner's guide. Beginning Microsoft Visual C# 2010 starts with the basics and brings you thoroughly up to speed. You'll first cover the fundamentals such as variables, flow control, and object-oriented programming and gradually build your skills for Web and Windows programming, Windows forms, and data access.
    - Author: Karli Watson, Christian Nagel, Jacob Hammer Pedersen, Jon D. Reid, Morgan Skinner
    - Release Year: 2010
-   - [View Book]([text](https://app.box.com/s/1ytzs59lu75ukr1ca9f3oylzbur2rypq))
+   - [View Book](https://app.box.com/s/1ytzs59lu75ukr1ca9f3oylzbur2rypq)
 
 ## Book 2: [Second Book Title](#)
    - Description: A brief description of the second book.
