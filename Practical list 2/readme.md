@@ -57,8 +57,7 @@ This project is licensed under the [MIT License](LICENSE).
 Provide your contact information or ways for users to reach out to you.
 
 - Email: your.email@example.com
-- Twitter: [@yourtwitterhandle](https://twitter.com/bhargav_sz0)
-- GitHub: [YourGitHubUsername](https://github.com/bhargavtz)
+- Twitter: [@twitter](https://twitter.com/bhargav_sz0)
+- GitHub: [@GitHub](https://github.com/bhargavtz)
 ```
 
-Remember to replace placeholder text like "Project Name," "Your Name," and other details with your actual project information. Additionally, make sure to include a license file (e.g., LICENSE) if you choose a specific license for your project.

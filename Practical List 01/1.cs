@@ -27,7 +27,6 @@ class Converter
         Console.Read();
     }
 }
-
 class Program
 {
     static void Main()
