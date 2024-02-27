@@ -1,4 +1,48 @@
+## Short Questions [1 Mark]
+1. How can you declare variables in C#?
+Variables can be declared by specifying the data type followed by the variable name, e.g. `int number;`
 
+2. What is the use of the “object” data type in C#.NET?  
+The object data type is the ultimate base class for all data types in C#. It can be used to store any type of object.
+
+3. List at least six value types in C#.
+Six value types in C# are: int, float, double, bool, char, struct
+
+4. What is Event-Driven Programming?
+Event-driven programming is based on triggering events that run code in response to user actions or system events.
+
+5. What is an event handler? 
+An event handler is a method that executes in response to an event being raised.
+
+6. How can you declare main() in C sharp?  
+The main() method in C# is declared as: `static void Main(string[] args)`
+
+7. List out two different types of errors in C#.
+Two types of errors in C# are: compile time errors and runtime errors.  
+
+8. What are fatal errors?
+Fatal errors are serious errors that cause the program to crash.  
+
+9. Which type of mistake can cause a program to stop unexpectedly during execution?
+Runtime errors can cause the program to stop unexpectedly during execution.
+
+10. What Error Handler handles? / What is Error Handling?
+Error handlers handle exceptions and other errors in a program to prevent crashing. Error handling involves trapping errors and handling them gracefully.  
+
+11. Define the term “exception.” 
+An exception is an error that occurs during execution of a program.
+
+12. How is exception handling done in C#?
+Exception handling in C# uses try-catch-finally blocks to catch and handle exceptions.  
+
+13. Can we have only a “try” block without a “catch” block in C#?
+No, a try block must be followed by either a catch or finally block, or both.
+
+14. Why use the “finally” block in C#? 
+The finally block ensures execution of cleanup code like closing files, database connections etc.  
+
+15. How can you set breakpoint in a C sharp program?
+Breakpoints can be set in C# code by clicking on the left margin of the code editor window.
 
 ### Short Questions [2 Marks]
 
