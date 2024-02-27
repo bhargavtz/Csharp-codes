@@ -180,3 +180,267 @@ MDI (Multiple Document Interface) is a window management technique where a **par
 
 1.  **Compile the code:** This translates your program's code into a machine-readable format (executable file) that the operating system can understand. Your development environment usually provides a "Build" or "Compile" option to do this.
 2.  **Run the executable:** Once compiled, locate the generated executable file (typically with a `.exe` extension) and double-click it to execute the program. You can also run it from the command line or your development environment's "Run" or "Debug" options.
+
+## long Questions [5 Mark]
+
+
+1.Write a note on Gathering input controls.
+## Gathering Input Controls: Essential Elements of User Interaction
+
+**Input controls** are the building blocks for **collecting information and user interactions** within your application. They serve as bridges between users and your program, allowing users to provide data, make selections, and interact with the application's functionalities.
+
+**Key characteristics of input controls:**
+
+* **Variety of types:** Different control types cater to specific data types and interaction styles. 
+    * **Text boxes:** For single-line text input.
+    * **Password boxes:** For masked text input, like passwords.
+    * **Checkboxes:** For selecting one or multiple options.
+    * **Radio buttons:** For selecting only one option from a mutually exclusive set.
+    * **Combo boxes:** For selecting an option from a predefined list, often with the ability to enter custom values.
+    * **List boxes:** For displaying and selecting multiple options from a list.
+    * **Buttons:** For triggering actions when clicked.
+    * Many more specialized controls exist for various purposes.
+* **User-friendliness:** Well-designed input controls should be **intuitive and easy to use**. They should provide clear instructions and visually indicate their purpose through labels and proper placement.
+* **Data validation:** It's essential to implement appropriate **validation mechanisms** to ensure the entered data meets the expected format, range, or type. This helps prevent errors and improves data integrity.
+* **Accessibility:** Consider **accessibility guidelines** when choosing and designing input controls. Controls should be usable by people with disabilities, such as providing alternative input methods for users with limited mobility or keyboard access.
+
+**Effective use of input controls:**
+
+* **Matching the control type to the data:** Choose the most suitable control type based on the expected data format and user interaction needed.
+* **Clear labeling:** Provide descriptive labels that clearly explain the purpose of each control, aiding user understanding.
+* **Meaningful placement:** Arrange controls logically and intuitively within the user interface, guiding users through the information gathering process.
+* **Feedback mechanisms:** Provide feedback to users when they interact with controls, such as visual cues to acknowledge selections or error messages for invalid input.
+
+**By carefully selecting, designing, and using input controls, you can create user-friendly and efficient applications that effectively collect and utilize user input.**
+
+--
+
+1. List  out  the  input  controls.  Explain  any  three  in  brief  and  list  at  least  three  properties  of  each 
+control.
+
+**Common Input Controls:**
+
+1. **Text Box:**
+    - **Purpose:** Used for single-line text input.
+    - **Properties:**
+        - `Text`: Stores the currently entered text.
+        - `MaxLength`: Limits the maximum number of characters allowed.
+        - `Multiline`: Enables or disables multi-line input (usually set to `False`).
+
+2. **Password Box:**
+    - **Purpose:** Used for masked text input, commonly used for passwords.
+    - **Properties:**
+        - `Text`: Stores the currently entered password (displayed as asterisks or other masking characters).
+        - `PasswordChar`: Sets the character used to mask the entered text (defaults to '*').
+        - `MaxLength`: Limits the maximum number of characters allowed.
+
+3. **CheckBox:**
+    - **Purpose:** Used for selecting one or more options from a set, where each option can be independently selected or deselected.
+    - **Properties:**
+        - `Checked`: Determines whether the checkbox is currently selected (`True`) or not (`False`).
+        - `Text`: The label displayed next to the checkbox, describing the option.
+        - `Enabled`: Controls whether the checkbox is interactive (`True`) or disabled (`False`).
+
+4. **RadioButton:**
+    - **Purpose:** Used for selecting only one option from a mutually exclusive set. Only one radio button within a group can be selected at a time.
+    - **Properties:**
+        - `Checked`: Determines whether the radio button is currently selected (`True`) or not (`False`).
+        - `Text`: The label displayed next to the radio button, describing the option.
+        - `GroupName`: Assigns the radio button to a specific group, ensuring only one within that group can be selected.
+
+5. **Combo Box:**
+    - **Purpose:** Combines a text box and a drop-down list, allowing users to select from a predefined list of options or enter a custom value.
+    - **Properties:**
+        - `Text`: Holds the currently selected item, displayed in the text box portion.
+        - `Items`: A collection containing all the available options for selection in the drop-down list.
+        - `DropDownStyle`: Determines how the drop-down list is displayed (e.g., `DropDownList`, `DropDown`).
+
+6. **List Box:**
+    - **Purpose:** Used for displaying and selecting multiple options from a list. Users can select one or more items simultaneously.
+    - **Properties:**
+        - `Items`: A collection containing all the available options displayed in the list box.
+        - `SelectedIndex`: Gets or sets the zero-based index of the currently selected item (if single-selection is allowed).
+        - `SelectedIndices`: Gets a collection containing the zero-based indexes of all currently selected items (for multi-selection list boxes).
+
+7. **Button:**
+    - **Purpose:** Used to trigger actions when clicked. Can initiate functions, open new forms, submit data, etc.
+    - **Properties:**
+        - `Text`: The text displayed on the button, indicating its purpose.
+        - `Enabled`: Controls whether the button is interactive (`True`) or disabled (`False`).
+        - `Click`: An event that occurs when the button is clicked, allowing you to link it to specific code execution.
+
+---
+2. What is the use of Label control? List and explain at least three properties with example. 
+Absolutely! Here's an explanation of the Label control, its uses, and several properties with examples:
+
+**The Label Control: Purpose**
+
+The Label control in Visual Basic is primarily used to **display static text** on a form. Unlike textboxes, labels are not directly editable by the user. They provide a way to:
+
+* **Label other controls:** Place labels near text boxes, buttons, etc., to explain their purpose.
+* **Display instructions:** Provide guidance to the user on how to interact with the form.
+* **Show output or information:** Display calculated values, results, messages, etc.
+
+**Key Properties and Examples**
+
+1. **Text:**
+   - **Purpose:** The most fundamental property; it holds the text that you want the label to display.
+   - **Example:** 
+     ```vb.net
+     Label1.Text = "Hello, World!"
+     ```
+
+2. **Font:** 
+   - **Purpose:** Allows you to control the font style, size, and appearance of the label's text.
+   - **Example:**
+     ```vb.net
+     Label1.Font = New Font("Arial", 12, FontStyle.Bold)
+     ```
+
+3. **AutoSize:**
+    - **Purpose:** A Boolean property that determines whether the label will automatically resize itself to fit the text (True), or maintain a fixed size, potentially truncating the text if it exceeds the bounds (False).
+    - **Example:**
+      ```vb.net
+      ' AutoSize = True (Default) - Label resizes to fit the text
+      Label1.Text = "This is a potentially long string of text." 
+
+      ' AutoSize = False - Label maintains fixed size
+      Label1.AutoSize = False  
+      ```
+
+**Additional Important Properties**
+
+* **ForeColor:** Controls the text color of the label.
+* **TextAlign:** Sets the alignment of the text within the label's boundaries (e.g., Left, Right, Center).
+* **Image:** Sets an image to be displayed within the label along with or instead of text.
+
+
+---
+3. Explain ListBox and ComboBox control with at least two properties. 
+Here's a breakdown of ListBox and ComboBox controls, along with at least two of their key properties:
+
+**ListBox**
+
+* **Purpose:** Presents a scrollable list of items from which users can select one or multiple entries. Ideal for displaying a moderate number of choices.
+
+* **Properties:**
+
+    1.  **Items:** A collection that stores the individual items displayed within the list box. You can add items at design time or programmatically using `Items.Add` or `Items.AddRange`.
+    2. **SelectionMode:** Controls how many items a user can select. Options include:
+        * `None`: No selection allowed.
+        * `One`: Only one item can be selected at a time.
+        * `MultiSimple`: Multiple items can be selected using the mouse and keyboard.
+        * `MultiExtended`: Multiple items can be selected with more flexible control using Ctrl/Shift + clicks.
+
+**ComboBox**
+
+* **Purpose:** Combines a text box and a drop-down list. It allows users to either select an item from a predefined list or enter a custom value. Great for situations where you want to offer a list of suggestions but also enable some flexibility.
+
+* **Properties:**
+
+    1. **Items:** Similar to the ListBox, the `Items` collection stores the options displayed in the drop-down list.
+    2. **DropDownStyle:** Determines the display style of the combo box:
+        * `Simple`:  A text box and list that is always visible.
+        * `DropDown`: (Default) A text box with a drop-down arrow; only the list appears when the arrow is clicked.
+        * `DropDownList`: A text box with a drop-down arrow; the user can only select from the list and cannot enter custom values. 
+
+
+---
+4. State significance of following properties of the controls:
+i. “passwordchar” property of TextBox.
+ii. “default” property of command button.
+iii. “style” property of CheckBox button.
+iv. “multiselect” property of listbox.
+v. “listindex” property of listbox.
+
+## Significance of Control Properties:
+
+Here's a breakdown of the significance of the mentioned control properties:
+
+**i. `passwordchar` Property of TextBox:**
+
+- **Purpose:** Controls the character displayed to mask the actual text entered in a password box.
+- **Significance:** Enhances security by hiding the actual password characters from onlookers. It provides visual feedback and prevents users from accidentally revealing their passwords while typing. 
+
+**ii. `default` Property of Command Button:**
+
+- **Purpose:** Specifies the button that is triggered by pressing the Enter key or using the default action setting in certain dialog boxes.
+- **Significance:**
+    - Improves user experience by simplifying interaction.
+    - Users can press Enter instead of clicking the mouse, making the process faster and more efficient.
+    - It provides a clear indication of the primary action associated with the form or dialog.
+
+**iii. `style` Property of CheckBox Button:**
+
+- **Purpose:** Determines the visual appearance of a CheckBox.
+- **Significance:**
+    - Offers variety in representing the checkbox state (checked, unchecked, indeterminate).
+    - Allows customization to match the overall design aesthetic of your application.
+    - Examples of `style` options include `Flat`, `RadioButton`, and `CheckBox`.
+
+**iv. `multiselect` Property of ListBox:**
+
+- **Purpose:** Controls whether users can select multiple items from the list box.
+- **Significance:**
+    - Enables selecting multiple options if required by the functionality of your application.
+    - Provides flexibility to users in situations where they need to choose more than one item.
+
+**v. `listindex` Property of ListBox:**
+
+- **Purpose:** Gets or sets the zero-based index of the currently selected item in a single-selection list box.
+- **Significance:**
+    - Allows programmatic access to the selected item's index, facilitating further actions based on the selection.
+    - Enables you to work with the selected item, such as retrieving its text or value, or performing operations based on its position in the list.
+
+---
+5. What is the use of Picture Box control? List and explain at least three properties with example.
+Absolutely! Here's an explanation of the PictureBox control, its purpose, and several properties with examples:
+
+**Purpose of the PictureBox Control**
+
+The PictureBox control in Visual Basic is specifically designed to display images within your forms. It's a versatile control that supports various image formats, including:
+
+* **BMP** (Bitmaps)
+* **JPEG** (Joint Photographic Experts Group)
+* **GIF** (Graphics Interchange Format)
+* **PNG** (Portable Network Graphics)
+* **Icons** 
+
+**Key Properties and Examples**
+
+1. **Image:**
+   - **Purpose:** The most important property; it holds the image to be displayed within the PictureBox. You can set it at design time or load an image dynamically at runtime using code.
+   - **Example:**
+      ```vb.net
+      ' Load from file:
+      PictureBox1.Image = Image.FromFile("C:\Images\MyPicture.jpg") 
+
+      ' Load from project resources: 
+      PictureBox1.Image = My.Resources.SampleImage 
+      ```
+
+2. **SizeMode:**
+    - **Purpose:** Controls how the image is resized to fit within the bounds of the PictureBox. This property has several options:
+        * `Normal`: Displays the image at its original size, potentially cropping it if it doesn't fit the PictureBox dimensions.
+        * `StretchImage`: Stretches or shrinks the image to fit the PictureBox entirely, potentially distorting the aspect ratio.
+        * `AutoSize`: Automatically resizes the PictureBox to accommodate the image's original dimensions.
+        * `CenterImage`: Centers the image within the PictureBox (no resizing), potentially leaving empty space.
+        * `Zoom`: Zooms the image to fill the PictureBox, maintaining aspect ratio, and cropping if necessary.
+    - **Example:**
+      ```vb.net
+      PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage 
+      ```
+
+3. **BorderStyle:**
+    - **Purpose:** Determines the appearance of the border around the PictureBox.
+    - **Options:**
+        * `None`: No border.
+        * `FixedSingle`: A thin, single-line border.
+        * `Fixed3D`: A three-dimensional border.
+    - **Example:**
+      ```vb.net
+      PictureBox1.BorderStyle = BorderStyle.Fixed3D 
+      ```
+
+---
+
