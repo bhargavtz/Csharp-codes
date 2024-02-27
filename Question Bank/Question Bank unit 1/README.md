@@ -229,4 +229,38 @@ Here's a breakdown of the key features of the .NET framework:
 
 ---
 
+1.Give the difference between ReadLine(), Read(), ReadKey() in C#.
 
+In C#, the methods `ReadLine()`, `Read()`, and `ReadKey()` are all used for reading input from the user, but they differ in what they read and how they handle the user pressing the Enter key:
+
+**1. ReadLine():**
+
+* **Purpose:** Reads a line of text from the standard input stream, including any characters typed until the user presses the Enter key (newline character).
+* **Returns:** A string containing the entire line of text entered by the user, excluding the newline character.
+* **Behavior upon Enter:** Stops reading and returns the complete line.
+
+**2. Read():**
+
+* **Purpose:** Reads a single character from the standard input stream.
+* **Returns:** An integer representing the ASCII code of the character read.
+* **Behavior upon Enter:** **Also reads the Enter key press**, returning the ASCII code for newline (typically 10 or 13, depending on the operating system).
+
+**3. ReadKey():**
+
+* **Purpose:** Reads a single character or function key from the keyboard, without waiting for the user to press Enter.
+* **Returns:** A `ConsoleKey` object if a key was pressed, otherwise `ConsoleKey.NoKey`. 
+* **Behavior upon Enter:** **Does not read the Enter key press**. This means it returns immediately without waiting for any further input.
+
+**Here's a table summarizing the key differences:**
+
+| Method          | Purpose                                         | Returns                                    | Behavior upon Enter |
+|----------------|-------------------------------------------------|-----------------------------------------------|---------------------|
+| `ReadLine()`   | Reads a line of text                              | String (excluding newline)                   | Stops reading        |
+| `Read()`        | Reads a single character                           | Integer (ASCII code of character)              | Reads and returns    |
+| `ReadKey()`     | Reads a single character or function key         | `ConsoleKey` object or `ConsoleKey.NoKey`      | Does not read         |
+
+**Choosing the right method:**
+
+* Use `ReadLine()` when you need to capture the entire line of user input, including spaces.
+* Use `Read()` when you only need to read a single character and want to capture the Enter key press as well.
+* Use `ReadKey()` when you want to read a single character or function key (like arrow keys) without waiting for the user to press Enter and potentially react to key presses as they happen.
