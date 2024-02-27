@@ -1,107 +1,182 @@
 ## Short Questions [1 Mark]
+**1. Design View:**
 
-1. What is polymorphism in C#?
-Polymorphism in C# allows an object to take on many forms. The same method or operator can behave differently depending on the type of object it is acting on.
+-   **Primary Window:** The main design window, also known as the **Form Designer** or **Visual Studio Designer**, is typically used to visually create and edit the user interface (UI) of your program.
+-   **Alternate Window:** Some development environments may offer a separate **Design** or **UI Designer** window specifically dedicated to UI creation.
 
-2. What is overriding in C#?
-Method overriding in C# allows a derived class to provide a specific implementation of a method that is already provided by one of its base classes.
+**2. Properties Window:**
 
-3. What is an interface in C#?
-An interface in C# is a contract that contains only method declarations and definitions for properties, events etc. Any class that implements the interface must provide an implementation for the methods of the interface.  
+-   The Properties window allows you to **view and modify the properties** of various controls and objects within your project. These properties define the appearance, behavior, and functionality of those elements.
 
-4. What is a constructor in C#? 
-A constructor in C# is a special method that is executed automatically when an object of a class is created. It is used to initialize the data members of new objects.
+**3. Properties Window Shortcut Key:**
 
-5. What is a destroyer in C#?
-A destructor in C# is a method that frees up resources and performs cleanup operations when the object is destroyed. 
+-   Frequently used shortcut key: **F4** (in many development environments)
+-   Alternative shortcut keys may exist and vary depending on your specific environment.
 
-6. What is the base class in.NET from which all the classes are derived from? 
-The System.Object class is the base class in .NET from which all other classes are derived either directly or indirectly.
+**4. Input Controls:**
 
-7. Differences between one line method overriding and method overloading.
-Method overriding occurs when a derived class has a method with same name and signature as a method in its base class. Method overloading occurs when there are multiple methods with the same name but different parameters within the same class.
+-   Input controls are UI elements that enable users to **enter data, make selections, or interact** with your program. They play a crucial role in collecting input and user interaction.
 
-8. How can we set classes to be inherited, but prevent the method from being overridden?
-We can use the sealed keyword to prevent a class from being inherited and the virtual keyword along with override to prevent a method from being overridden.  
+**5. Examples of Input Controls:**
 
-9. Why can’t we specify access modifiers for items in an interface?
-Interfaces contain only declarations. The actual implementation needs to be provided by the implementing classes in .NET.
+-   TextBox: Used for single-line text input.
+-   PasswordBox: Used for masked text input (e.g., passwords).
+-   CheckBox: Used for selecting one or more options from a set.
+-   RadioButton: Used for selecting only one option from a mutually exclusive set.
+-   ComboBox: Used for selecting an option from a predefined list, often with the ability to enter custom values.
+-   ListBox: Used for displaying and selecting multiple options from a list, often with the ability to scroll through the content.
+-   Button: Used to trigger actions when clicked.
 
-10. List the different types of constructors used in C#.
-Some types of constructors in C# are default constructor, parameterized constructor, copy constructor, static constructor etc.  
+**6. Label Control Properties:**
 
-11. Can you use multiple inheritance in .NET?
-No, C# does not support multiple inheritance of classes. However, it does support multiple interface inheritance.
+-   **Text:** The text displayed by the label.
+-   **Font:** The font style and size of the text.
+-   **ForeColor:** The color of the text.
+-   **AutoSize:** Determines whether the label automatically resizes its height to fit the displayed text (True) or maintains a fixed height (False).
+-   **TextAlign:** Controls the alignment of the text within the label (e.g., left, right, center).
+-   **Enabled:** Specifies whether the label is enabled and can interact with the user (True) or disabled and visually inactive (False).
+-   **Visible:** Determines whether the label is visible on the form (True) or hidden (False).
 
-## Short Questions [2 Mark]
+**7. AutoSize Property Effect:**
+
+-   **True:** The label's height will automatically adjust to accommodate all the text it contains, ensuring full visibility.
+-   **False:** The label will maintain the height you set, potentially truncating the text if it doesn't fit within the defined size.
+
+**8. Multiline Textbox:**
+
+-   **Multiline** property: Set to `True` to allow the textbox to display multiple lines of text.
+
+**9. RadioButton Selection:**
+
+-   **Checked** property: Set to `True` to select a specific RadioButton.
+
+**10. Checkbox Selection:**
+
+-   **Checked** property: Set to `True` to select a Checkbox.
+Here's the response to the questions, combining the best aspects of previous responses and addressing identified issues:
+
+**11. CheckState Property (CheckBox Control):**
+
+The `CheckState` property of a CheckBox control determines its current state:
+
+-   **Checked:** The checkbox is selected and displays a checkmark (`True`).
+-   **Unchecked:** The checkbox is not selected and does not display a checkmark (`False`).
+-   **Indeterminate:** This state is only available for tri-state checkboxes and indicates an intermediate, neither fully checked nor unchecked, state (`System.Windows.Forms.CheckState.Indeterminate`).
+
+**12. ListBox Control Properties:**
+
+Here are four common properties of ListBox controls:
+
+-   **Items:** A collection that stores the individual items displayed in the list box.
+-   **SelectedIndex:** Gets or sets the zero-based index of the currently selected item.
+-   **SelectedIndices:** A collection containing the zero-based indexes of all currently selected items (for multi-selection list boxes).
+-   **SelectedItem:** Gets or sets the currently selected item (if single-selection is allowed).
+
+**13. Adding Items to ListBox:**
+
+You can add items to the ListBox using the `Items` property in several ways:
+
+-   **At design time:** Edit the `Items` property directly in the Properties window, entering each item on a new line.
+-   **At runtime:** Use code, typically within your program or event handlers, to add items dynamically using methods like `AddItem`, `AddRange`, or by setting individual elements of the `Items` collection.
+
+**14. Displaying Selected Items:**
+
+There are two primary ways to display selected items in a ListBox:
+
+-   **Visually:** The selected item(s) in a ListBox are typically highlighted or displayed with a different background color for easier identification.
+-   **Programmatically:** You can access the selected item(s) using properties like `SelectedItem`, `SelectedItems`, or `SelectedIndex` to retrieve their values or perform further actions based on the selection.
+
+**15. SelectedIndex Property:**
+
+The `SelectedIndex` property of a ListBox returns the zero-based index of the currently **single** selected item. If no item is selected, it returns -1. This property allows you to programmatically identify, manage, or interact with the selected item based on its position within the list.
+
+**16. PictureBox Control Properties:**
+
+Here are four common properties of PictureBox controls:
+
+-   **Image:** The image displayed within the PictureBox. Can be set by providing an image object or loading an image file.
+-   **SizeMode:** Determines how the image is resized to fit within the PictureBox boundaries (e.g., Stretch, CenterImage, Zoom).
+-   **BorderStyle:** Controls whether the PictureBox displays a border and its style (e.g., None, FixedSingle, Fixed3D).
+-   **Size:** Sets the width and height of the PictureBox control.
+
+**17. Hiding Image in PictureBox:**
+
+-   **Visible:** Set this property of the PictureBox control to `False` on the button click event to hide the image.
+
+**18. SizeMode Property (PictureBox):**
+
+The `SizeMode` property of a PictureBox control determines how an image is resized to fit within the PictureBox's boundaries. Here are some common options:
+
+-   **Normal:** Displays the image at its original size, potentially causing it to be clipped if it exceeds the PictureBox's dimensions.
+-   **Stretch:** Stretches the image to fit the entire PictureBox area, potentially distorting the aspect ratio.
+-   **CenterImage:** Centers the image within the PictureBox, potentially leaving empty space around the image if it's smaller than the PictureBox.
+-   **Zoom:** Zooms the image to fill the entire PictureBox while maintaining the aspect ratio, potentially cropping parts of the image if necessary.
+-   **AutoSize:** Automatically resizes the PictureBox to fit the dimensions of the loaded image.
+
+**19. Timer Control Properties:**
+
+Here are four common properties of Timer controls:
+
+-   **Enabled:** Determines whether the timer is currently running (True) or stopped (False).
+-   **Interval:** Sets the time interval (in milliseconds) between timer ticks.
+-   **Start():** Starts the timer, triggering the `Tick` event at regular intervals.
+-   **Stop():** Stops the timer, preventing further `Tick` events until restarted.
+
+**20. Opening and Manipulating Forms:**
+
+You can open and manipulate forms using the following statements:
+
+-   **`Form formName = new Form();`**: This creates a new instance of a form named `formName`.
+-   **`formName.Show();`**: This displays the newly created form on the screen.
+-   **`formName.Close();`**: This closes the form, removing it from the screen.
+-   **`formName.Text = "New Title";`**: This sets the title of the form.
+-   **`formName.Location = new Point(x, y);`**: This sets the position of the form on the screen (x represents horizontal position, y represents vertical position).
+
+**21. Positioning Forms:**
+
+The **`Location`** property is used for positioning each form in your project. This property holds a `Point` object that specifies the form's coordinates (X and Y) relative to the top-left corner of the screen.
+
+**22. StartPosition Properties:**
+
+Here are the five `StartPosition` properties you can use to position a form on the Windows desktop:
+
+-   **Manual:** The form appears at the location specified by the `Location` property.
+-   **CenterScreen:** The form appears centered horizontally and vertically on the screen.
+-   **CenterParent:** The form appears centered relative to its parent form (if displayed as a modal dialog).
+-   **WindowsDefaultLocation:** The form appears at the default location determined by the system settings.
+-   **WindowsDefaultBounds:** The form appears with the size and location determined by the system settings.
 
 
-### 1. **What is an Object?**
-   - An object is an instance of a class in C# that encapsulates data (attributes) and behaviors (methods). Objects are created based on the blueprint defined by a class.
-The provided documents contain a variety of questions related to C# programming. Here are the answers to the remaining questions:
+**23. Setting Size and Position of a Startup Form:**
 
-### 2. **Difference Between Struct and Class in C#**
-   - **Struct:**
-     - Value type.
-     - Stored on the stack.
-     - Cannot be inherited.
-     - Does not support default parameterless constructor.
-   - **Class:**
-     - Reference type.
-     - Stored on the heap.
-     - Supports inheritance.
-     - Supports default parameterless constructor.
+Here are two common approaches to set the size and position of a startup form on the Windows desktop:
 
-### 3. **Data Encapsulation and Example**
-   - **Data Encapsulation:** It is the concept of bundling data (attributes) and methods (behaviors) that operate on the data within a class, hiding the internal state of an object and requiring interaction through defined interfaces.
-   - **Example:** In a `Car` class, private attributes like `speed` and `fuelLevel` can be encapsulated with public methods like `Accelerate()` and `Refuel()`, ensuring controlled access to these attributes.
+**1. Using Properties:**
 
-### 4. **Inheritance in C# with Example**
-   - Inheritance allows a class to inherit properties and behaviors from another class. For example:
-     ```csharp
-     class Animal {
-         public void Eat() {
-             Console.WriteLine("Animal is eating.");
-         }
-     }
+-   Set the **`Size`** property of the form in the designer by dragging the form's edges or entering the desired width and height in pixels.
+-   Set the **`Location`** property of the form in the designer or by code to specify its coordinates (X and Y) relative to the top-left corner of the screen.
 
-     class Dog : Animal {
-         public void Bark() {
-             Console.WriteLine("Dog is barking.");
-         }
-     }
-     ```
+**2. Using `StartPosition` Property:**
 
-### 5. **Difference Between Interface and Abstract Class in .NET**
-   - **Interface:**
-     - Contains only method signatures.
-     - Supports multiple inheritance.
-   - **Abstract Class:**
-     - Can have method implementations.
-     - Supports single inheritance.
+-   Set the **`StartPosition`** property of the form in the designer or by code to one of the pre-defined positions:
+    -   **`CenterScreen`**: Centers the form on the screen.
+    -   **`Manual`**: Uses the existing `Size` and `Location` properties.
+    -   **`WindowsDefaultLocation`**: Positions the form at the system's default location.
+    -   **`WindowsDefaultBounds`**: Positions the form at the system's default location and size.
 
-### 6. **Difference Between "ref" and "out" Keywords in C#**
-   - Both are used for passing arguments by reference, but with a key difference:
-     - `ref`: Requires the variable to be initialized before passing it to the method.
-     - `out`: Does not require initialization; the method must assign a value to it before returning.
+**24. TabIndex Property:**
 
-For more detailed explanations, refer to the provided search result documents[1][2].
+The **`TabIndex`** property of a control determines the **tabbing order** of controls on a form. When a user presses the Tab key, focus moves from one control to the next in the order defined by their `TabIndex` values (lowest to highest). This property helps users navigate the form using the keyboard efficiently.
 
-### 7. **Can "this" be used within a static method?**
-   - No, the `this` keyword cannot be used within a static method in C# because `this` refers to the current instance of the class, and static methods do not operate on instances but on the class itself.
+**25. Anchor Property:**
 
-### 8. **Extension Method in C# and How to Use Them**
-   - Extension methods allow adding new methods to existing types without modifying the original type. They are defined as static methods in static classes and must be in the same namespace as they are used.
+The **`Anchor`** property of a control allows you to **dock** it to the edges and sides of its container (usually a form). When the container resizes, the control automatically adjusts its position based on the anchored edges. This helps maintain the layout of your form across different screen resolutions.
 
-### 9. **Partial Classes**
-   - Partial classes allow splitting a class into multiple files while retaining a single logical class definition. This feature is useful for separating auto-generated code from developer-written code.
+**26. MDI (Multiple Document Interface):**
 
-### 10. **Late Binding vs. Early Binding in C#**
-   - **Late Binding:** Resolving method calls at runtime, providing flexibility but potentially slower and less type-safe.
-   - **Early Binding:** Resolving method calls at compile time, offering better performance and type safety.
+MDI (Multiple Document Interface) is a window management technique where a **parent form** can contain and manage multiple **child forms** within a single application window. The parent form typically provides a common user interface like menus and toolbars, while each child form acts as a separate document window within the application.
 
-### 11. **Conflicting Method Names in Inherited Interfaces**
-   - When inherited interfaces have conflicting method names, the implementing class must explicitly implement both methods with unique names to resolve the conflict.
+**27. Steps to Run a Visual Program:**
 
-### 12. **Constructor Chaining in C#**
-   - Constructor chaining refers to calling one constructor from another constructor within the same class or from a derived class constructor to an inherited class constructor, facilitating code reuse and initialization.
+1.  **Compile the code:** This translates your program's code into a machine-readable format (executable file) that the operating system can understand. Your development environment usually provides a "Build" or "Compile" option to do this.
+2.  **Run the executable:** Once compiled, locate the generated executable file (typically with a `.exe` extension) and double-click it to execute the program. You can also run it from the command line or your development environment's "Run" or "Debug" options.
